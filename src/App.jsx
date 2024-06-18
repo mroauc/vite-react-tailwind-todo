@@ -8,7 +8,7 @@ function App() {
         <header className="container mx-auto px-4">
           <div className="flex justify-between">
             <h1 className="uppercase text-white text-3xl pt-8 font-bold tracking-[0.3em]">ToDo</h1>
-            <button><MoonIcon className="fill-orange-950"></MoonIcon></button>
+            <button><MoonIcon className="fill-white"></MoonIcon></button>
           </div>
           <form className="bg-white rounded-md overflow-hidden py-4 flex gap-2 items-center px-4 my-5">
             <span className="rounded-full border-2 w-5 h-5 inline-block"> </span>
