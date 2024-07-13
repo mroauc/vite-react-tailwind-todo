@@ -20,7 +20,7 @@ const TodoCreate = ({createTodo}) => {
                 value={title}
                 type="text"
                 className="w-full text-gray-400 outline-none dark:bg-gray-800"
-                placeholder="Vale te amo..."
+                placeholder="Escribe una nueva tarea"
                 onChange={(e) => setTitle(e.target.value)}
             />
         </form>

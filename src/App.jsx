@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TodoComputed from "./components/TodoComputed";
@@ -8,12 +8,8 @@ import TodoList from "./components/TodoList";
 import CrossIcon from "./components/icons/CrossIcon";
 import MoonIcon from "./components/icons/MoonIcon";
 
-const initialStateTodos = [
-  {id: 1, title: 'Ir al gimnasio', completed: false},
-  {id: 2, title: 'Hacer la cama', completed: false},
-  {id: 3, title: '10 minutos de meditacion', completed: true},
-  {id: 4, title: 'Leer por 1 hora', completed: true}
-];
+const initialStateTodos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
+console.log(initialStateTodos);
 
 function App() {
 
@@ -57,6 +53,10 @@ function App() {
     const changeFilter = (filter) => setFilter(filter);
 
     const computedItemsLeft = todos.filter(todo => {return !todo.completed}).length;
+
+    useEffect(() =>{
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     return (
       <div className="bg-[url('./assets/images/bg-mobile-light.jpg')] dark:bg-[url('./assets/images/bg-mobile-dark.jpg')] dark:bg-gray-900 bg-no-repeat bg-contain bg-gray-300 min-h-screen">
