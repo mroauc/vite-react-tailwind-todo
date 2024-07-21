@@ -91,7 +91,7 @@ function App() {
 
         <section className="text-center mt-6 dark:text-gray-400">
           <p>Arrastra y suelta para ordenar las tareas</p>
-          <p>MⓇOA</p>
+          <p>MⓇA</p>
         </section>
       </div>
     );
