@@ -90,7 +90,8 @@ function App() {
         </main>
 
         <section className="text-center mt-6 dark:text-gray-400">
-          <p>Drag and drop to reorder list</p>
+          <p>Arrastra y suelta para ordenar las tareas</p>
+          <p>MⓇOA</p>
         </section>
       </div>
     );
